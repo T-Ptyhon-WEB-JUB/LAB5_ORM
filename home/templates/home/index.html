@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+{% block title %}
+Home Page
+{% endblock %}
+{% block content %}
+{% load static %}
+<img src="{% static '2.jpg' %}"  class='img-thumbnail' />
+<h1>Welcom </h1>
+
+<br />
+<h2 class="sub-heder">List of notes</h2>
+{% for note in notes %}
+
+
+<div class="card">
+  <h5 class="card-header">note</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{note.title}}</h5>
+    <p class="card-text">{{note.description}}</p>
+    <a href="#" class="btn btn-primary">Go to note</a>
+  </div>
+</div>
+
+
+{% endfor %}
+{% endblock %}
