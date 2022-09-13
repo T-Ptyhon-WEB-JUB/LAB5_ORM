@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Note
+{% endblock %}
+
+{% block content %}
+
+<h1> Add Your Notes! </h1>
+
+<form method="POST" action="">
+  
+    {{ form.as_p }}
+
+    {% csrf_token %}
+
+    <input type="submit" value="Add Note"  class="btn btn-dark"/>
+    
+</form>
+
+{% endblock %}
