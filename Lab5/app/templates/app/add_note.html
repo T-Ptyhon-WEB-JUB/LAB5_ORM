@@ -1,21 +1,18 @@
 {% extends 'app/base.html' %}
 
-{% block title %}
-Note
-{% endblock %}
+{% load static %}
 
 {% block content %}
 
-<h1> Add Your Notes! </h1>
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
 
+<h2>Add Note:</h2>
 <form method="POST" action="">
   
-    {{ form.as_p }}
+    {{ NoteForm.as_p }}
 
     {% csrf_token %}
 
     <input type="submit" value="Add Note"  class="btn btn-dark"/>
-    
 </form>
-
 {% endblock %}

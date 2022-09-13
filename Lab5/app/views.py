@@ -7,9 +7,12 @@ from .models import Note
 # Create your views here.
 
 
+
 def index(request : HttpRequest):
 
-    return render(request, 'app/index.html')
+    notes = Note.objects.all()
+
+    return render(request, 'app/index.html', {"notes" : notes})
 
 def add_note(request : HttpRequest):
 
@@ -21,8 +24,13 @@ def add_note(request : HttpRequest):
             note.save()
             return redirect(resolve_url("app:index"))
 
-    note_form = NoteForm
+    note_form = NoteForm()
     
     return render(request, 'app/add_note.html', {"NoteForm" : note_form})
+
+
+def about(request):
+
+    return render(request, 'app/about.html')
 
 

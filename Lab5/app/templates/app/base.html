@@ -14,8 +14,8 @@
   <body>
 
     <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{% url "app:index" %}">T-N</a>
+      <div class="container-fluid text">
+        <a class="navbar-brand text-white ps-5" href="{% url "app:index" %}">N-T</a>
         <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon bg-white"></span>
         </button>
@@ -23,7 +23,7 @@
           <div class="navbar-nav">
             <a class="nav-link active text-white" aria-current="page" href="{% url "app:index" %}">Home</a>
             <a class="nav-link text-white" href="{% url "app:add_note" %}">Add Note</a>
-            <a class="nav-link text-white" href="#">About Us</a>
+            <a class="nav-link text-white" href="{% url "app:about" %}">About Us</a>
           </div>
         </div>
       </div>
