@@ -1,0 +1,9 @@
+{% extends 'lab5App/index.html' %}
+{% block content%}
+<h2>Add Note:</h2>
+<form method="POST" action="{% url 'lab5App:addingNote' %}" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_ul }}
+<input type="submit" value="Add a new Note" />
+</form>
+{%endblock%}
