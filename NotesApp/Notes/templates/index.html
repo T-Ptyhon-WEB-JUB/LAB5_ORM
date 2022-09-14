@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{%block content%}
+<main class="container">
+  <h1>This is your notes</h1>
+  {% for i in note %}
+  <div
+    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+  >
+    <div class="col p-4 d-flex flex-column position-static">
+      <h3>{{i.title}}</h3>
+      <div class="mb-1 text-muted">{{i.created_at}}</div>
+      <p class="card-text mb-auto">{{i.description}}</p>
+    </div>
+  </div>
+  {%endfor%}
+</main>
+
+{% endblock %}

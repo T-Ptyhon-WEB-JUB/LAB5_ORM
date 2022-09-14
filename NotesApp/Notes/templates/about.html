@@ -1,0 +1,15 @@
+{% extends "base.html" %} {%load static%} {%block content%}
+<header class="masthead bg-dark text-white text-center">
+  <div class="container d-flex align-items-center flex-column p-5">
+    <img
+      src="{% static 'imgs/profile-picture.png' %}"
+      alt="profile img"
+      style="width: 20%;"
+      class="masthead-avatar rounded mx-auto my-3 d-block"
+    />
+    <h1 class="masthead-heading text-uppercase mb-0">profile name</h1>
+    <p class="masthead-subheading font-weight-light mb-0">Programmer  - Web Designer </p>
+  </div>
+</header>
+
+{% endblock %}
