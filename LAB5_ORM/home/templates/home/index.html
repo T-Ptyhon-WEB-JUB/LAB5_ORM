@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1 style="margin-top: 100px;">Here is all my notes </h1>
+
+<br />
+
+{% for note in notes %}
+
+
+
+     <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{note.title}}</h5>
+          <p class="card-text">{{note.description}}</p>
+          <h6>{{note.created_at}}</h6>
+        </div>
+      </div>
+
+{% endfor %}
+
+
+
+{% endblock %}
