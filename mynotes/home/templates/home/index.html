@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+{% block title %}
+Home Page 
+{% endblock %}
+{% block content %}
+{% load static %}
+<img src="{% static 'images.png' %}" />
+<br /> 
+
+
+
+<h2 class="sub-heder">My notes</h2>
+{% for note in notes %}
+
+    <b>Date: </b> {{format_date}}
+
+<div class="card">
+  <h5 class="card-header">note</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{note.title}}</h5>
+    <p class="card-text">{{note.description}}</p>
+  </div>
+</div>
+
+
+{% endfor %}
+{% endblock %}
