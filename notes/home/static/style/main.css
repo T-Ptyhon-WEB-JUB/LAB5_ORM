@@ -1,0 +1,33 @@
+h3 {
+    color: rgb(80, 80, 169);
+}
+
+label {
+    font-size: 20px;
+    color: rgb(143, 110, 174);
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.card-header h5 {
+    color: rgb(143, 110, 174);
+}
+
+.card-box {
+    text-align: -webkit-center;
+}
+
+.card-text {
+    text-align: left;
+    font-size: 16px;
+}
+
+.card-subtitle {
+    text-align: left;
+    font-size: 13px;
+}
+
+h5 {
+    color: rgb(143, 110, 174);
+}
